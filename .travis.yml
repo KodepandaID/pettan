@@ -1,0 +1,25 @@
+sudo: true
+dist: xenial
+language: node_js
+node_js:
+  - "12"
+
+branches:
+  only:
+    - master
+
+cache: npm
+
+install:
+  - npm install
+  - npm install --save-dev
+  - npm install -g eslint
+  - npm install -g eslint-plugin-import
+  - npm install -g eslint-config-airbnb-base
+
+script:
+  - npm run lint
+  - npm run coverage
+
+stages:
+  - test
