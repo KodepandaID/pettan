@@ -1,0 +1,45 @@
+{
+  "name": "pettan",
+  "version": "1.0.0",
+  "description": "Pettan is a flat-file JSON DBMS. You can query the JSON file like DBMS.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "test": "mocha --timeout 30000 --exit",
+    "coverage": "nyc npm test && nyc report --reporter=text-lcov --skip-empty | coveralls",
+    "coverage:standard": "nyc npm test && nyc report --reporter=text-lcov --skip-empty",
+    "coverage:generate": "nyc report --reporter=html"
+  },
+  "keywords": [
+    "json",
+    "json-query",
+    "query",
+    "query builder"
+  ],
+  "homepage": "https://github.com/KodepandaID/pettan",
+  "bugs": {
+    "url": "https://github.com/KodepandaID/pettan/issues",
+    "email": "yudha.webdev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KodepandaID/pettan"
+  },
+  "author": {
+    "name": "Yudha Pratama Wicaksana",
+    "email": "yudha.webdev@gmail.com",
+    "url": "https://yudhapratama.com"
+  },
+  "license": "GPL-3.0",
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "mocha": "^6.2.0"
+  }
+}
