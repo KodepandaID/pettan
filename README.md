@@ -19,6 +19,8 @@ npm install pettan --save
 **collection()** method used to load a JSON file. You should run this method first.
 ```js
 const pettan = require('pettan').collection('books.json');
+// or you can load array collection
+const pettan = require('pettan').collection([{_id: '123'}]);
 ```
 
 ## find()
